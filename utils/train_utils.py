@@ -92,8 +92,19 @@ def build_model(model_name='sage', dataset_name='twitch/ES', ckpt=None, lr=0.05,
         devices=devices,
         **hparams,
     )
+    # Lightning trainer
+    # trainer = pl.Trainer(
+    #     check_val_every_n_epoch=10,
+    #     deterministic=False,
+    #     accelerator="auto",  # Automatically selects 'gpu' or 'cpu'
+    #     devices="auto",      # Uses all available GPUs or defaults to CPU
+    #     logger=logger,
+    #     max_epochs=args["n_epoch"],
+    #     accumulate_grad_batches=args["n_accumulation_steps"],
+    #     callbacks=[EarlyStopping(monitor='epoch/val_loss', patience=patience)],
+    #     default_root_dir=log_root
+    # )
 
-    # lighting trainer
     trainer = pl.Trainer(
         check_val_every_n_epoch=10,
         deterministic=False,

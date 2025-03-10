@@ -46,7 +46,7 @@ def get_arguments():
                         help='maximum number of node pairs to attack')
     parser.add_argument('--insert_node_feature', type=str, default='random',
                         help='insert model feature: [random, typical, target, mean, median].')
-    parser.add_argument('--attack_node_degree', type=str, default='',
+    parser.add_argument('--attack_node_degree', type=str, default='uncons',
                         help='attack model degree: [uncons, low, high].')
     parser.add_argument('--dynamic', action='store_true', default=False,
                         help='dynamic graph')

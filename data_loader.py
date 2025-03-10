@@ -58,9 +58,7 @@ class GraphDataModule(LightningDataModule):
         # load the graph from the dataset
         if remove_self_loop:
             self.dataset[0].edge_index = remove_self_loops(self.dataset[0].edge_index)
-
         self.data = self.dataset[0]
-
         # parameters for DP
         self.dp_epsilon = dp_epsilon
         self.noise_seed = noise_seed

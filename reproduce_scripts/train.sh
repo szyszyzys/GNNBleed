@@ -42,7 +42,8 @@ Run_train() {
         --num_layers "$num_layers" \
         --h_dim "$hidden_dim" \
         --lr 0.001 \
-        --gpuid "$gpu_id"
+        --gpuid "$gpu_id" \
+        --root_path revision
 }
 
 # Loop through all combinations

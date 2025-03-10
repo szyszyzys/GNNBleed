@@ -20,13 +20,13 @@ fi
 # ========================
 dataset="$1"
 gpu_id="${2:-7}"
-target_layer="${3:-4}"
+target_layer="${3:-3}"
 insert_node_strategy="${4:-same}"
 dynamic_rate="${5:-0.01}"
 evolve_mode="${6:-all}"
 n_hidden="${7:-64}"
 new_node_rate="${8:-0.2}"
-root_path="${9:-result}"
+root_path="${9:-revision}"
 
 # Assign attack types (supports multiple attacks)
 shift 9  # Shift past the first 9 arguments

@@ -1,0 +1,183 @@
+/outputs
+/data
+/log
+/reconstruct_log
+**/__pycache__/
+Es/
+twitch/
+.idea/*
+*.pt
+
+
+# ===================================
+# General Git Ignore Rules
+# ===================================
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+venv/
+.env/
+env/
+.venv/
+*.venv
+
+# Ignore dependency caches
+pip-log.txt
+pip-delete-this-directory.txt
+poetry.lock
+
+# ===================================
+# Machine Learning / Deep Learning
+# ===================================
+
+# Ignore model checkpoints and logs
+checkpoints/
+*.ckpt
+*.pth
+*.pt
+*.h5
+*.onnx
+*.pb
+*.tflite
+*.model
+
+# Ignore large TensorFlow/Keras files
+events.out.tfevents.*
+
+# Ignore Hugging Face and other large models
+transformers_cache/
+datasets_cache/
+hf_cache/
+pytorch_model.bin
+config.json
+tokenizer.json
+
+# Ignore output directories
+logs/
+runs/
+wandb/
+mlruns/
+tensorboard/
+results/
+experiments/
+output/
+outputs/
+predictions/
+
+# ===================================
+# Datasets and Raw Data
+# ===================================
+
+# Ignore large datasets
+data/
+datasets/
+*.csv
+*.tsv
+*.jsonl
+*.json
+*.xlsx
+*.parquet
+*.hdf5
+*.sqlite3
+*.db
+
+# Ignore processed data files
+processed_data/
+features/
+embeddings/
+cache/
+*.npy
+*.npz
+*.pkl
+*.joblib
+
+# ===================================
+# Jupyter Notebooks
+# ===================================
+
+# Ignore notebook checkpoints
+#.ipynb_checkpoints/
+
+# Ignore large notebooks (optional)
+#*.ipynb
+
+# Ignore hidden Jupyter files
+.jupyter/
+.jupyter_cache/
+
+# ===================================
+# Bash and Shell Scripts
+# ===================================
+
+# Ignore generated logs and temporary files
+*.log
+*.out
+*.err
+
+# ===================================
+# LaTeX / Research Papers
+# ===================================
+
+# Ignore LaTeX build files
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.fls
+*.fdb_latexmk
+*.pdfsync
+*.synctex
+*.dvi
+*.ps
+
+# Ignore generated PDFs (optional)
+*.pdf
+
+# Ignore Overleaf backup files
+*.bak
+
+# ===================================
+# Version Control and IDEs
+# ===================================
+
+# Ignore VS Code and PyCharm settings
+.vscode/
+.idea/
+*.iml
+
+# Ignore JetBrains (PyCharm, IntelliJ)
+*.ipr
+*.iws
+*.idea/
+
+# Ignore Eclipse
+*.project
+*.classpath
+*.cproject
+.settings/
+
+# Ignore Emacs and Vim files
+*~
+.#*
+*.swp
+*.swo
+
+# Ignore temporary Git files
+.git/
+.gitignore~

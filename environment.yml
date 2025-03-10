@@ -1,15 +1,18 @@
-name: gnnbrep
+name: GNNBLEED
 channels:
+  - pyg
   - pytorch
   - nvidia
   - defaults
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
 dependencies:
   - _libgcc_mutex=0.1
   - _openmp_mutex=5.1
   - blas=1.0
   - brotli-python=1.0.9
   - bzip2=1.0.8
-  - ca-certificates=2024.12.31
+  - ca-certificates=2025.2.25
   - certifi=2025.1.31
   - charset-normalizer=3.3.2
   - cuda-cudart=11.7.99
@@ -60,9 +63,10 @@ dependencies:
   - nettle=3.7.3
   - openh264=2.1.1
   - openjpeg=2.5.2
-  - openssl=3.0.15
+  - openssl=3.0.16
   - pillow=11.1.0
   - pip=25.0
+  - pyg=2.5.2
   - pysocks=1.7.1
   - python=3.10.16
   - pytorch=1.13.1
@@ -166,7 +170,7 @@ dependencies:
       - tensorboard==2.18.0
       - tensorboard-data-server==0.7.2
       - threadpoolctl==3.5.0
-      - torch-geometric==2.3.0
+      - torch-geometric==2.6.1
       - torchmetrics==0.9.3
       - tqdm==4.67.1
       - traitlets==5.14.3
@@ -180,4 +184,4 @@ dependencies:
       - werkzeug==3.1.3
       - xmod==1.8.1
       - yarl==1.18.3
-#prefix: /
+prefix: /home/artifacts/miniconda/envs/GNNBLEED

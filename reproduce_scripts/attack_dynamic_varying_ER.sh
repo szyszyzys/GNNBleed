@@ -15,17 +15,17 @@ fi
 # Arguments with default values
 dataset="${1:-lastfm}"
 gpu_id="${2:-7}"
-target_layer="${3:-4}"
+target_layer="${3:-3}"
 insert_node_strategy="${4:-same}"
 evolve_mode="${5:-all}"
 attack_type="${6:-dp2}"
 n_hidden="${7:-64}"
 new_node="${8:-0.2}"
-root_path="${9:-result}}"
+root_path="${9:-revision}"
 
 # Static settings
-target_node_degree=""
-models=("gcn" "gat" "sage" "gin")
+target_node_degree="uncons"
+models=("gin" "gcn" "gat" "sage")
 prs=("1")
 dynamic_rates=("0.000001" "0.00001" "0.0001" "0.0005" "0.001" "0.005" "0.01" "0.02" "0.05")
 

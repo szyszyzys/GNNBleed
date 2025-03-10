@@ -1,21 +1,33 @@
 #!/bin/bash
 
 # Ensure the script is executed with at least a dataset argument
-if [ -z "$1" ]; then
+if [[ -z "$1" ]]; then
     echo "Usage: $0 <dataset> [gpu_id] [attack_types] [target_layer] [insert_node_strategy] [root_path] [twohop_enabled] [h_dims]"
     exit 1
 fi
 
-# Assign input arguments with default values
+# Assign input arguments with proper default values
 dataset="$1"
 gpu_id="${2:-0}"
-attack_types="${3:-inf_3}"
+attack_types=("${@:3:1}")  # Capture attack_types argument if given
 target_layer="${4:-4}"
-h_dims=("${5:-"64 128 256"}")
-insert_node_strategy="${6:-same}"
-root_path="${7:-result}"
-twohop_enabled="${8:-yes}"
+insert_node_strategy="${5:-same}"
+root_path="${6:-revision}"
+twohop_enabled="${7:-yes}"
+h_dims=("${@:8}")  # Capture h_dims argument if given
+
+# ✅ Set default values if empty
+if [[ ${#attack_types[@]} -eq 0 ]]; then
+    attack_types=("inf_3" "inf_4")  # Default attack types
+fi
+
+if [[ ${#h_dims[@]} -eq 0 ]]; then
+    h_dims=("64" "128" "256")  # Default hidden dimensions
+fi
+
+# Fixed array initialization
 models=("gcn" "gin" "sage" "gat")
+
 p_rates=("1")
 lrs=("0.001")
 
@@ -64,7 +76,7 @@ run_attack() {
 
 # Iterate over models, attack types, and hyperparameters
 for model in "${models[@]}"; do
-    for attack_type in "${$attack_types[@]}"; do
+    for attack_type in "${attack_types[@]}"; do
         for p_rate in "${p_rates[@]}"; do
             for h_dim in "${h_dims[@]}"; do
                 for lr in "${lrs[@]}"; do
