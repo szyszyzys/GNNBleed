@@ -35,7 +35,7 @@ The time and storage requirements may vary across devices but should not be sign
 
 ### Accessibility (All badges)
 
-Git Repositories (https://github.com/szyszyzys/GNNBleed.git), Revision Number: eb1031733599b3a5fe69a0d3c211baf948d71c7e.
+Git Repositories (https://github.com/szyszyzys/GNNBleed.git), Revision Number: 36ebafd5a9a2bdc1a527457c406f577bd2945f26.
 
 ### Set up the environment (Only for Functional and Reproduced badges)
 
