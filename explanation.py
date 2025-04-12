@@ -6,16 +6,8 @@ import networkx as nx
 import pandas as pd
 import torch
 from torch import Tensor
-
 from torch_geometric.explain import Explainer, GNNExplainer, PGExplainer
-from torch_geometric.explain.explanation import Explanation
-import matplotlib.pyplot as plt
-from torch_geometric.explain.config import (ExplanationType,
-                                            MaskType,
-                                            ModelConfig,
-                                            ModelMode,
-                                            ModelReturnType,
-                                            ThresholdConfig,
+from torch_geometric.explain.config import (ModelConfig,
                                             )
 
 
