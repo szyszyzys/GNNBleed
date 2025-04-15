@@ -186,4 +186,5 @@ dependencies:
       - yarl==1.18.3
       - matplotlib
       - jupyter
+      - graphviz
 prefix: /home/artifacts/miniconda/envs/GNNBLEED
